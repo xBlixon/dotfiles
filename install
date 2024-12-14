@@ -1,2 +1,6 @@
 #!/usr/bin/bash
 DOTDIR="$(cd "$(dirname "$0")" && pwd)"
+CFGDIR="$HOME/.config"
+
+rm -rf $CFGDIR/kitty
+ln -s $DOTDIR/kitty $CFGDIR/kitty
