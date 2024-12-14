@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+DOTDIR="$(cd "$(dirname "$0")" && pwd)"
