@@ -1,2 +1,5 @@
-require("basic")
-require("keymaps")
+require("config.basic")
+require("config.keymaps")
+require("config.lazy")
+require("config.pluginkeys")
+require("config.theme")
