@@ -31,3 +31,4 @@ vim.keymap.set('v', '<A-k>', ":move '<-2<CR>gv=gv")
 
 vim.keymap.set('n', '<Leader>l', ":bn<CR>")
 vim.keymap.set('n', '<Leader>h', ":bp<CR>")
+vim.keymap.set('n', '<Leader>Q', ":bd<CR>")
