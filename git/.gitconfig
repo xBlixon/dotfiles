@@ -1,0 +1,61 @@
+[user]
+    name = Xawier Słupik
+    email = 48760619+xBlixon@users.noreply.github.com
+
+[alias]
+    a = add
+    aa = add --all
+
+    r = restore --staged
+    ra = restore --staged .
+    
+    ci = commit -m
+    amend = commit --amend --no-edit
+
+    s = status --short --branch
+    st = status
+
+    co = checkout
+    br = branch -vv
+
+    rmbr = branch -d
+    rmbrf = branch -D
+
+    # show last commit
+    last = show --stat HEAD
+    lg = log --oneline --graph --decorate --all
+
+    origin = remote --verbose
+    
+    undo = reset --soft HEAD~1
+
+    # see changed files across commits/branches
+    diff-files = diff --name-only
+
+
+[commit]
+    gpgsign = true
+
+[core]
+    eol = native
+    editor = code --wait
+
+[help]
+    autocorrect = false
+
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = false
+
+[push]
+    # No more: git push --set-upstream origin <branch>
+    autoSetupRemote = true
+
+[fetch]
+    prune = true
+
+[rerere]
+    # Reuse Recorded Resolution - merge conflict resolution (merge/rebase)
+    enabled = true
