@@ -34,10 +34,10 @@
 
 
 [commit]
-    gpgsign = true
+    gpgsign = false
 
 [core]
-    eol = native
+    autocrlf = input
     editor = code --wait
 
 [help]
