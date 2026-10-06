@@ -34,7 +34,7 @@ foreach ($SourceRel in $Dotfiles.Keys) {
         New-Item -ItemType Directory -Path $TargetParent -Force | Out-Null
     }
 
-    # 3. Utwórz właściwy symlink w zależności od tego, czy źródło to plik czy folder
+    # Create symbolic link
     New-Item -ItemType SymbolicLink -Path $Target -Target $Source | Out-Null
     Write-Host "Linked: $SourceRel -> $Target" -ForegroundColor Green
 }
