@@ -1,13 +1,21 @@
 #!/usr/bin/env bash
 
+if [ -z "$BASH_VERSION" ] || [ "${BASH_VERSINFO[0]}" -lt 4 ]; then
+  echo "Error: This script requires bash version 4.0+" >&2
+  echo "Detected: ${BASH_VERSION:-unknown shell}" >&2
+  echo "Interpreter path: $BASH" >&2
+  exit 1
+fi
+
 set -euo pipefail
 
 # Dotfiles root
 DOT_ROOT="$(cd "$(dirname "$0")" && pwd)"
 
 # MAP: Relative path in project = Absolute system path
-declare -A DOTFILES
-DOTFILES["git/.gitconfig"]="$HOME/.gitconfig"
+declare -A DOTFILES=(
+    ["git/.gitconfig"]="$HOME/.gitconfig"
+)
 
 for SOURCE_REL in "${!DOTFILES[@]}"; do
     SOURCE="$DOT_ROOT/$SOURCE_REL"
