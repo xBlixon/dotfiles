@@ -38,3 +38,5 @@ foreach ($SourceRel in $Dotfiles.Keys) {
     New-Item -ItemType SymbolicLink -Path $Target -Target $Source | Out-Null
     Write-Host "Linked: $SourceRel -> $Target" -ForegroundColor Green
 }
+
+Write-Host "`nSetup complete!" -ForegroundColor Cyan
